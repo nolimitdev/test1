@@ -1,0 +1,97 @@
+/*
+===========================================================
+Fonts
+===========================================================
+*/
+
+/*font generator http://transfonter.org*/
+@define-mixin --fTextNormal { font-family: var(--fFontFamilyRegular), "Arial", Helvetica, sans-serif; }
+@define-mixin --fTextBold { font-family: var(--fFontFamilyBold), "Arial", Helvetica, sans-serif; }
+
+/*
+===========================================================
+Components
+===========================================================
+*/
+
+/*Mask overflow*/
+@define-mixin --mask { mask-image: radial-gradient(circle, #fff 100%, #fff 100%) }
+
+/*GPU acceleration*/
+@define-mixin --gpuAcceleration { transform: translate3d(0, 0, 0); backface-visibility: hidden; perspective: 1000; transform: translateZ(0); }
+
+/*Centered*/
+@define-mixin --centeredBox { position: absolute; overflow: auto; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%; display: flex; box-direction: normal; box-orient: horizontal; flex-direction: row; flex-wrap: wrap; box-pack: center; justify-content: center; align-content: stretch; align-items: center; }
+
+@define-mixin --centered { display: flex; justify-content: center; align-content: center; align-items: center; }
+
+@define-mixin --centeredHorizontal { display: inline-flex; justify-content: flex-start; align-content: flex-start; align-items: center; }
+
+/*middle line on background*/
+@define-mixin --middleBgLine { background-image: linear-gradient(color-mod(var(--fBackgroundLine) a(10%)) 0, color-mod(var(--fBackgroundLine) a(10%)) 0); background-size: 1px 1px; background-position: 0px 50%; background-repeat: repeat-x; }
+
+@define-mixin --topBgLine { background-image: linear-gradient(color-mod(var(--fBackgroundLine) a(10%)) 0, color-mod(var(--fBackgroundLine) a(10%)) 0); background-size: 1px 1px; background-position: 0px 0%; background-repeat: repeat-x; }
+
+@define-mixin --bottomBgLine { background-image: linear-gradient(color-mod(var(--fBackgroundLine) a(10%)) 0, color-mod(var(--fBackgroundLine) a(10%)) 0); background-size: 1px 1px; background-position: 0px 100%; background-repeat: repeat-x; }
+
+/*main menu background color*/
+@define-mixin --mainMenuColor { background-image: linear-gradient(180deg, var(--fMainMenuBgColorFrom) 0%, var(--fMainMenuBgColorTo) 100%); background-position: center center; }
+
+/*border outline as border*/
+@define-mixin --boxOutlineAsBorder { border: 1px solid color-mod(var(--gray700) l(+10%) a(20%)); position: absolute; top: 0; left: 0; height: 100%; width: 100%; content: ""; z-index: -1; }
+
+/*border outline as outline*/
+@define-mixin --boxOutlineAsOutline { outline: 1px solid color-mod(var(--gray700) l(+10%) a(50%)); }
+
+/*border radius*/
+@define-mixin --borderSemiCircle { border-radius:9999px; }
+
+/*focus*/
+@define-mixin --focusOutline { box-shadow: 0 0 0 var(--fInputBorderRadius) var(--fButtonFocusOutlineColor); }
+@define-mixin --focusOutlineValid { box-shadow: 0 0 0 var(--fInputBorderRadius) var(--fButtonFocusOutlineColorValid); }
+@define-mixin --focusOutlineInValid { box-shadow: 0 0 0 var(--fInputBorderRadius) var(--fButtonFocusOutlineColorInValid); }
+@define-mixin --focusTransform { top: var(--fInputFocusTransform); }
+
+/*animation*/
+@define-mixin --transition2s { transition: all .2s ease-in-out; }
+@define-mixin --transition1s { transition: all .1s ease-in-out; }
+
+/*text wrapping*/
+@define-mixin --noWrapDottSingleLine { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+
+@define-mixin --dottMultiLine { text-overflow: ellipsis; overflow: hidden; }
+@define-mixin --noWrap { white-space: nowrap; }
+
+/*background linear gradient*/
+@define-mixin --bgGradient01 { background: linear-gradient(to bottom, var(--color1000) 0%, var(--color800) 100%) }
+
+/*dotted background - tool - http://www.patternify.com*/
+@define-mixin --dottedBg { background-image: repeating-radial-gradient(center center, var(--fDottedBackground), var(--fDottedBackground) 1px, transparent 1px, transparent 100%); background-size: 3px 3px; }
+
+@define-mixin --dottedBg2 { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGUlEQVQYV2O8dPXrTD1t7nQGKGCEMYgXAAAD0QQFZJEfTwAAAABJRU5ErkJggg==); }
+
+/*shadow button*/
+@define-mixin --shadow00 {box-shadow: inset 0 0 0 0 transparent, 0 0 0 0 transparent, 0 1px 1px -1px rgba(0, 0, 0, calc(0.2 * var(--fValueLevel))); }
+
+/*shadows by Tailwind*/
+@define-mixin --shadow01 {box-shadow: rgba(0, 0, 0, calc(0.06 * var(--fValueLevel))) 0px 2px 4px 0px inset;}
+@define-mixin --shadow02 {box-shadow: rgba(0, 0, 0, calc(0.05 * var(--fValueLevel))) 0px 0px 0px 1px;}
+@define-mixin --shadow03 {box-shadow: rgba(0, 0, 0, calc(0.1 * var(--fValueLevel))) 0px 1px 3px 0px, rgba(0, 0, 0, calc(0.06 * var(--fValueLevel))) 0px 1px 2px 0px;}
+@define-mixin --shadow04 {box-shadow: rgba(0, 0, 0, calc(0.2 * var(--fValueLevel))) 0px 4px 6px -1px, rgba(0, 0, 0, calc(0.12 * var(--fValueLevel))) 0px 2px 4px -1px;}
+@define-mixin --shadow05 {box-shadow: rgba(0, 0, 0, calc(0.1 * var(--fValueLevel))) 0px 10px 15px -3px, rgba(0, 0, 0, calc(0.05 * var(--fValueLevel))) 0px 4px 6px -2px;}
+@define-mixin --shadow06 {box-shadow: rgba(0, 0, 0, calc(0.1 * var(--fValueLevel))) 0px 20px 25px -5px, rgba(0, 0, 0, calc(0.04 * var(--fValueLevel))) 0px 10px 10px -5px;}
+@define-mixin --shadow07 {box-shadow: rgba(0, 0, 0, calc(0.25 * var(--fValueLevel))) 0px 25px 50px -12px;}
+
+/*shadows by box-shadows.co*/
+@define-mixin --shadow08 {box-shadow: rgba(0, 0, 0, calc(0.1 * var(--fValueLevel))) 0px 1px 0px;}
+@define-mixin --shadow09 {box-shadow: rgba(0, 0, 0, calc(0.05 * var(--fValueLevel))) 0px 1px 0px, rgba(0, 0, 0, calc(0.1 * var(--fValueLevel))) 0px 0px 8px;}
+@define-mixin --shadow10 {box-shadow: rgba(0, 0, 0, calc(0.1 * var(--fValueLevel))) 0px 0px 16px;}
+@define-mixin --shadow11 {box-shadow: rgba(0, 0, 0, calc(0.05 * var(--fValueLevel))) 0px 4px 16px, rgba(0, 0, 0, calc(0.05 * var(--fValueLevel))) 0px 8px 32px;}
+@define-mixin --shadow12 {box-shadow: rgba(0, 0, 0, calc(0.1 * var(--fValueLevel))) 0px 4px 16px, rgba(0, 0, 0, calc(0.05 * var(--fValueLevel))) 0px 8px 32px;}
+@define-mixin --shadow13 {box-shadow: rgba(0, 0, 0, calc(0.1 * var(--fValueLevel))) 0px 1px 0px, rgba(0, 0, 0, calc(0.1 * var(--fValueLevel))) 0px 8px 24px, rgba(0, 0, 0, calc(0.1 * var(--fValueLevel))) 0px 16px 48px;}
+@define-mixin --shadow14 {box-shadow: rgba(0, 0, 0, calc(0.1 * var(--fValueLevel))) 0px 4px 16px, rgba(0, 0, 0, calc(0.1 * var(--fValueLevel))) 0px 8px 24px, rgba(0, 0, 0, calc(0.1 * var(--fValueLevel))) 0px 16px 56px;}
+@define-mixin --shadow15 {box-shadow: rgba(0, 0, 0, calc(0.1 * var(--fValueLevel))) 0px 8px 24px, rgba(0, 0, 0, calc(0.1 * var(--fValueLevel))) 0px 16px 56px, rgba(0, 0, 0, calc(0.1 * var(--fValueLevel))) 0px 24px 80px;}
+
+/*scroll*/
+@define-mixin --scrollY { overflow-y: auto; overflow-x: visible; }
+@define-mixin --scrollX { overflow-x: auto }

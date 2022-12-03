@@ -1,0 +1,260 @@
+/*
+===========================================================
+Config
+===========================================================
+*/
+
+:root {
+
+/*safe area height*/
+--JSsafeAreaHeightTop:                      0px;
+--JSsafeAreaHeightBottom:                   0px;
+
+/*text*/
+--fFontFamilyRegular:                       "Roboto-Regular";
+--fFontFamilyBold:                          "Roboto-Bold";
+--fTextLineHeightXs:                        1.15; /*16.1px - Tight for extra space*/
+--fTextLineHeightMd:                        1.2;  /*16.8px - Default for headings*/
+--fTextLineHeightLg:                        1.3;  /*18.2px - Captions, hint texts and form errors*/
+--fTextLineHeightBody:                      1.2;
+--fTextLineHeightForm:                      20px; /*for form inputs, textareas and buttons*/
+--fTextColor:                               var(--gray900);
+--fTextSelect:                              var(--gray500);
+--fTextSelectCode:                          var(--palette130);
+
+/*icon*/
+--fIconSizeXxxl:                            calc(var(--fIconSizeMd)*4);
+--fIconSizeXxl:                             calc(var(--fIconSizeMd)*2.5);
+--fIconSizeXl:                              calc(var(--fIconSizeMd)*2);
+--fIconSizeLg:                              calc(var(--fIconSizeMd)*1.5);
+--fIconSizeMd:                              200%; /*default*/
+--fIconSizeSm:                              calc(var(--fIconSizeMd)/1.5);
+--fIconSizeXs:                              calc(var(--fIconSizeMd)/2);
+--fIconSizeXxs:                             calc(var(--fIconSizeMd)/2.5);
+
+/*body*/
+--fAppBodyWidthXs:                          100%;
+--fAppBodyWidthSm:                          100%;
+--fAppBodyWidthMd:                          100%;
+--fAppBodyWidthLg:                          100%;
+--fAppBodyBgColor:                          var(--gray1000);
+--fAppBgHeaderColor:                        var(--gray100);
+--fAppBgColor:                              var(--gray100);
+--fAppBgColorOnTablet:                      var(--gray100);
+--fAppBgColorOnMobile:                      var(--white);
+--fGlobalGap:                               1rem;
+--fGlobalGap05:                             .5rem;
+
+/*box*/
+--fBoxBgColor:                              var(--white);
+--fBoxBorderRadius:                         var(--fInputBorderRadius);
+--fBoxAir1:                                 1rem;
+--fBoxAir2:                                 2rem;
+
+/*scrollbar*/
+--fScrollbarThumb:                          var(--gray300);
+--fScrollbarThumbHover:                     var(--gray300);
+--fScrollbarThumbActive:                    var(--gray300);
+--fScrollbarTrackRadius:                    5px;
+--fScrollbarWidth:                          5px;
+--fScrollbarHeight:                         5px;
+
+/*global color*/
+--fColorSuccess:                            var(--color270);
+--fColorError:                              var(--color210);
+--fColorWarning:                            var(--color220);
+--fColorPrimary:                            var(--color260);
+--fColorGhost:                              var(--gray700);
+
+/*font size*/
+--fFontSizeXxxl:                            2.25rem;
+--fFontSizeXxl:                             1.5rem;
+--fFontSizeXl:                              1.25rem;
+--fFontSizeLg:                              1rem;
+--fFontSizeMd:                              0.875rem; /*default*/
+--fFontSizeSm:                              0.75rem;
+--fFontSizeXs:                              0.6875rem;
+--fFontSizeXxs:                             0.6rem;
+
+/*input padding*/
+--fInputPaddingLg:                          calc(var(--fFontSizeLg)/1.4);
+--fInputPaddingMd:                          calc(var(--fFontSizeMd)/1.25); /*default*/
+--fInputPaddingSm:                          calc(var(--fFontSizeSm)/2);
+--fInputPaddingXs:                          calc(var(--fFontSizeXs)/2);
+
+/*input height*/
+--fInputHeightLg:                           calc(var(--fFontSizeLg)*2.8);
+--fInputHeightMd:                           calc(var(--fFontSizeMd)*2.5); /*default*/
+--fInputHeightSm:                           calc(var(--fFontSizeSm)*2.3);
+--fInputHeightXs:                           calc(var(--fFontSizeXs)*2);
+
+--fInputTextPadding:                        8px;
+--fInputBorderRadius:                       4px;
+--fInputBorderSize:                         1px;
+--fInputFontColor:                          var(--fTextColor);
+--fInputBackgroundColor:                    var(--white);
+--fInputFocusColor:                         var(--gray600);
+--fInputBorderColor:                        var(--gray200);
+--fInputInvalidColor:                       var(--fColorError);
+--fInputValidColor:                         var(--fColorSuccess);
+--fInputDisabledColor:                      var(--gray500);
+--fInputFocusTransform:                     1px;
+--fInputShadow:                             /*unset*/;
+
+/*header and footer*/
+--fHeaderTitleFontSize:                     130%;
+--fHeaderTitleHeight:                       8em;
+--fNotificationCounterBorderRadius:         20px;
+
+/*header and footer for mobile*/
+--fHeaderHeightOnExtraSmall:                5em;
+--fHeaderBgColorOnExtraSmall:               var(--gray100);
+--fHeaderTitleHeightOnExtraSmall:           5em;
+--fHeaderTitleBackgorundColorOnExtraSmall:  var(--gray100);
+--fHeaderTitleBorderColorOnExtraSmall:      var(--gray200);
+--fFooterHeightOnExtraSmall:                5em;
+--fFooterBgColorOnExtraSmall:               var(--gray100);
+--fFooterBorderColorOnExtraSmall:           var(--gray200);
+
+/*main menu*/
+--fMainMenuWidthOnExtraSmall:                80.3%;
+--fMainMenuWidthOnSmall:                     6em;
+--fMainMenuWidthOnMedium:                    6em;
+--fMainMenuWidthOnLarge:                     15.3%;
+--fMainMenuBgColorFrom:                      var(--color700);
+--fMainMenuBgColorTo:                        var(--color600);
+--fMainMenuClickAreaBgColor:                 var(--black);
+--fMainMenuItemColors:                       var(--color400);
+--fMainMenuItemColorsActive:                 var(--color400);
+--fMenuItemPaddingTopBottom:                .6em;
+--fMenuItemPaddingLeftRight:                .8em;
+--fMenuItemBorderRadius:                    4px;
+--fMenuItemIconSize:                        120%;
+
+/*checkbox and radio*/
+--fCheckBoxRadius:                          3px;
+--fCheckBoxRadioBorderColorOnHover:         var(--gray700);
+--fCheckBoxRadioBorderColor:                var(--gray700);
+--fCheckBoxBackground:                      var(--white);
+--fCheckBoxChecked:                         var(--gray800);
+--fCheckBoxCheckedIconColor:                var(--color100);
+--fRadioButtonRadius:                       50%;
+
+/*dropdown*/
+--fDropDownBackground:                      var(--color100);
+--fDropDownListBackground:                  var(--color100);
+--fDropDownRadius:                          var(--fInputBorderRadius);
+--fDropDownListHover:                       color-mod(var(--gray400) a(30%) l(+10%));
+--fDropDownListInner:                       color-mod(var(--gray300) a(50%) l(+10%));
+--fDropDownListItemPaddingTopBottom:        10px;
+--fDropDownListItemPaddingLeftRight:        10px;
+--fDropDownListItemMargin:                  10px;
+--fDropDownListItemRadius:                  var(--fInputBorderRadius);
+
+/*textarea*/
+--fTextAreaFontSize:                        var(--fFontSizeMd);
+--fTextAreaBorderRadius:                    4px;
+--fTextAreaBorder:                          var(--color300);
+--fTextAreaLine:                            var(--color800);
+--fTextAreaFocus:                           var(--color1000);
+--fTextAreaBackgroundColor:                 var(--white);
+
+/*selectbox*/
+--fSelectBoxBorderColor:                    var(--gray200);
+--fSelectBoxBackgroundColor:                var(--gray100);
+--fSelectBoxTextColor:                      var(--fTextColor);
+
+/*table*/
+--fTableBorderRadius:                       calc(var(--fInputBorderRadius)*2);
+--fTableBackground:                         var(--white);
+--fTableHeadColor:                          var(--gray700);
+--fTableBorderColor:                        var(--gray200);
+--fTableBorderSize:                         var(--fInputBorderSize);
+--fTableRowHover:                           color-mod(var(--gray100) l(-7%));
+--fTableHeadActive:                         color-mod(var(--gray100) l(-7%));
+--fTableOddLine:                            color-mod(var(--gray100) l(-4%));
+--fTableCellPaddingTopBottom:               .5rem;
+--fTableCellPaddingRightLeft:               1rem;
+
+/*buttons*/
+--fButtonBorderRadius:                      var(--fInputBorderRadius);
+--fButtonBorderSize:                        var(--fInputBorderSize);
+--fButtonColorSuccess:                      var(--fColorSuccess);
+--fButtonColorError:                        var(--fColorError);
+--fButtonColorWarning:                      var(--fColorWarning);
+--fButtonColorPrimary:                      var(--fColorPrimary);
+--fButtonColorGhost:                        var(--fColorGhost);
+--fButtonColorDisabled:                     var(--gray400);
+--fButtonColorTwitter:                      var(--color230);
+--fButtonColorFacebook:                     var(--color240);
+--fButtonColorGoogle:                       var(--color250);
+--fButtonBackgroundDefaultColor:            var(--fAppBgColor);
+--fButtonBackgroundWavesEffect:             var(--gray500);
+--fButtonFocusOutlineColor:                 color-mod(var(--gray1000) a(10%) contrast(90%));
+--fButtonFocusOutlineColorValid:            color-mod(var(--fInputValidColor) a(10%) contrast(90%));
+--fButtonFocusOutlineColorInValid:          color-mod(var(--fInputInvalidColor) a(10%) contrast(90%));
+--fButtonIconSize:                          calc(var(--fFontSizeMd)*1.3);
+
+/*switch button*/
+--fButtonSwitchBorder:                      var(--gray300);
+--fButtonSwitchBackground:                  var(--gray100);
+--fButtonSwitchBackgroundChecked:           var(--color270);
+
+/*range*/
+--fRangeThumbSize:                          16px;
+--fRangeSliderBackgroundColor:              transparent;
+--fRangeSliderBackgroundColorActive:        color-mod(var(--gray300) a(50%) l(+10%));
+--fRangeSliderColor:                        var(--gray200);
+--fRangeSliderThumb:                        var(--gray400);
+--fRangeSliderHover:                        var(--gray400);
+--fRangeSliderActive:                       var(--gray500);
+
+/*content editable*/
+--fContentEditableBackgorund:               var(--white);
+--fContentEditableEmpty:                    var(--gray200);
+
+/*modal window*/
+--fModalWindowClickAreaBgColor:             var(--gray1000);
+--fModalWindowBorderSize:                   var(--fInputBorderSize);
+--fModalWindowBorderRadius:                 calc(var(--fInputBorderRadius)*2);
+--fModalWindowMaxHeight:                    80vh;
+
+/*bubble notification*/
+--fBubblelWindowBorderRadius:               calc(var(--fInputBorderRadius)*2);
+--fBubblelWindowWidth:                      25vw;
+
+/*toast notice*/
+--fToastNoticePadding:                      var(--fGlobalGap);
+
+/*cards*/
+--fCardDefaultfWidth:                       15rem;
+--fCardBorder:                              auto;
+
+/*middle line on background*/
+--fBackgroundLine:                          var(--gray500);
+--fLineInner:                               var(--color200);
+
+/*middle line on background*/
+--fDottedBackground:                        var(--color400);
+
+/*middle line on background*/
+--fHoverItem:                               var(--color400);
+
+/*notification counter color*/
+--fNotificationCountColor1:                 var(--color230);
+--fNotificationCountColor2:                 var(--color210);
+--fNotificationCountColor3:                 var(--color600);
+
+/*user avatar*/
+--fUserAvatarSizeXxs:                       .6;
+--fUserAvatarSizeXs:                        .8;
+--fUserAvatarSizeSm:                        .9;
+--fUserAvatarSizeMd:                        1;
+--fUserAvatarSizeLg:                        1.2;
+--fUserAvatarSizeXl:                        1.4;
+--fUserAvatarPhotoSize:                     30px;
+--fUserAvatarPhotoBorderRadius:             calc(var(--fInputBorderRadius)*2);
+--fUserAvatarStatusBorderRadius:            var(--fInputBorderRadius);
+--fUserAvatarPadding:                       var(--fMenuItemPaddingLeftRight);
+
+}

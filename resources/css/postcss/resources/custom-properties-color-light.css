@@ -1,0 +1,203 @@
+/*
+==========================================================================
+Light color
+==========================================================================
+*/
+
+:root {
+
+/*Light 1*/
+
+/*
+--white: #FDFDFD;
+--black: #121212;
+--fValueLevel: 1;
+
+--gray100: #f9f9f9;
+--gray200: #dedfdf;
+--gray300: #c4c4c4;
+--gray400: #acacac;
+--gray500: #939494;
+--gray600: #7c7c7c;
+--gray700: #656565;
+--gray800: #4f4f4f;
+--gray900: #3a3a3a;
+--gray1000: #262626;
+
+--color100: #f8f8fd;
+--color200: #ddddf5;
+--color300: #c0c1ed;
+--color400: #a5a7e5;
+--color500: #8b8cdd;
+--color600: #6f72d4;
+--color700: #5457c8;
+--color800: #3a3fb5;
+--color900: #2a2d89;
+--color1000: #1a1d5f;
+*/
+
+
+/*generateContrastColors({ colorKeys: ["#4a4ec3"], base: "#ffffff", ratios: [1.05,1.27,1.63,2.22,3.09,4.3,5.91,7.98,10.55,15.15], colorspace: "HSL"});*/
+/*https://leonardocolor.io/?colorKeys=%234a4ec3&base=ffffff&ratios=1.05%2C1.36%2C1.87%2C2.73%2C4.00%2C5.79%2C8.18%2C11.26%2C15.11%2C20&mode=HSLuv*/
+
+/*https://leonardocolor.io/theme?name=Livechatoo&config=%7B%22baseScale%22%3A%22gray%22%2C%22colorScales%22%3A%5B%7B%22name%22%3A%22gray%22%2C%22colorKeys%22%3A%5B%22%23121212%22%5D%2C%22colorspace%22%3A%22RGB%22%2C%22ratios%22%3A%5B%221.05%22%2C%221.27%22%2C%221.63%22%2C%222.22%22%2C%223.09%22%2C%224.3%22%2C%225.91%22%2C%227.98%22%2C%2210.55%22%2C%2215.15%22%5D%2C%22smooth%22%3Afalse%7D%2C%7B%22name%22%3A%22color%22%2C%22colorKeys%22%3A%5B%22%234a4ec3%22%5D%2C%22colorspace%22%3A%22HSLuv%22%2C%22ratios%22%3A%5B%221.05%22%2C%221.27%22%2C%221.63%22%2C%222.22%22%2C%223.09%22%2C%224.3%22%2C%225.91%22%2C%227.98%22%2C%2210.55%22%2C%2215.15%22%5D%2C%22smooth%22%3Afalse%7D%5D%2C%22lightness%22%3A100%2C%22contrast%22%3A1%2C%22saturation%22%3A100%7D*/
+
+
+/*Light 2*/
+
+/*
+--white: #FDFDFD;
+--black: #121212;
+--fValueLevel: 1;
+
+--color100: #fefeff;
+--color200: #dfdff6;
+--color300: #bdbdec;
+--color400: #9899e2;
+--color500: #7578d7;
+--color600: #565aca;
+--color700: #3b40b7;
+--color800: #2b2f8c;
+--color900: #1b1e60;
+--color1000: #050521;
+
+--gray100: #F4F4F4;
+--gray200: #E0E0E0;
+--gray300: #C6C6C6;
+--gray400: #A8A8A8;
+--gray500: #8D8D8D;
+--gray600: #6F6F6F;
+--gray700: #525252;
+--gray800: #393939;
+--gray900: #262626;
+--gray1000: #161616;
+
+*/
+
+/*Light 3*/
+
+/*
+--white: #FDFDFD;
+--black: #121212;
+--fValueLevel: 1;
+
+--color100: #f8f8fd;
+--color200: #d9d9f4;
+--color300: #b8b9ea;
+--color400: #989ae2;
+--color500: #797cd8;
+--color600: #5a5dcb;
+--color700: #3b40b7;
+--color800: #282c85;
+--color900: #161955;
+--color1000: #040520;
+
+--gray100: #f9f9f9;
+--gray200: #dbdbdb;
+--gray300: #bdbdbd;
+--gray400: #a0a0a0;
+--gray500: #858585;
+--gray600: #6a6a6a;
+--gray700: #505050;
+--gray800: #383838;
+--gray900: #212121;
+--gray1000: #080808;
+
+*/
+
+/*Light 4*/
+
+--white: #FDFDFD;
+--black: #0D1117;
+--fValueLevel: 1;
+
+--gray100: #F3F5F7;
+--gray200: #E6EAEE;
+--gray300: #CCD6DD;
+--gray400: #AEB6C2;
+--gray500: #95A1B1;
+--gray600: #65788E;
+--gray700: #485A6D;
+--gray800: #364553;
+--gray900: #29313D;
+--gray1000: #181E26;
+
+--color100: #F0EEFF;
+--color200: #DBD7FD;
+--color300: #B8B4F7;
+--color400: #837AF4;
+--color500: #6259ED;
+--color600: #352CDE;
+--color700: #291FC1;
+--color800: #241AA0;
+--color900: #1B147B;
+--color1000: #130E58;
+
+
+/*Light 5*/
+
+/*
+--white: #FDFDFD;
+--black: #0D1117;
+--fValueLevel: 1;
+
+--gray100: #f9f9f9;
+--gray200: #dedfdf;
+--gray300: #c4c4c4;
+--gray400: #acacac;
+--gray500: #939494;
+--gray600: #7c7c7c;
+--gray700: #656565;
+--gray800: #4f4f4f;
+--gray900: #3a3a3a;
+--gray1000: #262626;
+
+--color100: #F0EEFF;
+--color200: #DBD7FD;
+--color300: #B8B4F7;
+--color400: #837AF4;
+--color500: #6259ED;
+--color600: #352CDE;
+--color700: #291FC1;
+--color800: #241AA0;
+--color900: #1B147B;
+--color1000: #130E58;
+*/
+
+
+/*https://leonardocolor.io/theme?name=Livechatoo2&config=%7B%22baseScale%22%3A%22gray%22%2C%22colorScales%22%3A%5B%7B%22name%22%3A%22gray%22%2C%22colorKeys%22%3A%5B%22%23000000%22%5D%2C%22colorspace%22%3A%22RGB%22%2C%22ratios%22%3A%5B%221.05%22%2C%221.38%22%2C%221.88%22%2C%222.61%22%2C%223.69%22%2C%225.41%22%2C%228.06%22%2C%2211.73%22%2C%2216.1%22%2C%2220.03%22%5D%2C%22smooth%22%3Afalse%7D%2C%7B%22name%22%3A%22color%22%2C%22colorKeys%22%3A%5B%22%234a4ec3%22%5D%2C%22colorspace%22%3A%22HSLuv%22%2C%22ratios%22%3A%5B%221.05%22%2C%221.38%22%2C%221.88%22%2C%222.61%22%2C%223.69%22%2C%225.41%22%2C%228.06%22%2C%2211.73%22%2C%2216.1%22%2C%2220.03%22%5D%2C%22smooth%22%3Afalse%7D%5D%2C%22lightness%22%3A100%2C%22contrast%22%3A1%2C%22saturation%22%3A100%7D*/
+
+/*Light 6*/
+
+/*
+--white: #FDFDFD;
+--black: #121212;
+--fValueLevel: 1;
+
+--gray100: #f9f9f9;
+--gray200: #dedfdf;
+--gray300: #c4c4c4;
+--gray400: #acacac;
+--gray500: #939494;
+--gray600: #7d7d7d;
+--gray700: #666666;
+--gray800: #505050;
+--gray900: #3b3b3b;
+--gray1000: #272727;
+
+--color100: #f2fbf6;
+--color200: #b6ebcd;
+--color300: #74d99f;
+--color400: #29c46b;
+--color500: #0daa50;
+--color600: #0b9044;
+--color700: #097637;
+--color800: #075c2c;
+--color900: #054420;
+--color1000: #032e15;
+
+*/
+/*
+https://leonardocolor.io/theme?name=Tiketor&config=%7B%22baseScale%22%3A%22gray%22%2C%22colorScales%22%3A%5B%7B%22name%22%3A%22gray%22%2C%22colorKeys%22%3A%5B%22%23121212%22%5D%2C%22colorspace%22%3A%22RGB%22%2C%22ratios%22%3A%5B%221.05%22%2C%221.33%22%2C%221.73%22%2C%222.27%22%2C%223.03%22%2C%224.12%22%2C%225.74%22%2C%228.06%22%2C%2211.2%22%2C%2214.94%22%5D%2C%22smooth%22%3Afalse%7D%2C%7B%22name%22%3A%22color%22%2C%22colorKeys%22%3A%5B%22%230fbd5a%22%5D%2C%22colorspace%22%3A%22RGB%22%2C%22ratios%22%3A%5B%221.05%22%2C%221.33%22%2C%221.73%22%2C%222.27%22%2C%223.03%22%2C%224.12%22%2C%225.74%22%2C%228.06%22%2C%2211.2%22%2C%2214.94%22%5D%2C%22smooth%22%3Afalse%7D%5D%2C%22lightness%22%3A100%2C%22contrast%22%3A1%2C%22saturation%22%3A100%7D*/
+
+}

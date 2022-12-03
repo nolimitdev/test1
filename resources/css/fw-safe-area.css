@@ -1,0 +1,72 @@
+/*
+===========================================================
+Safearea
+===========================================================
+*/
+
+/*
+Tento CSS kod sa pouziva pre mobilne aplikacie pre odsadenie headeru zhora a odsadenie footra z dola kvoli status baru a zalivom.
+Testovat je mozne aj na webovej verzii pridanim parametrov do URL https://example.com/?safeAreaHeightTop=X&safeAreaHeightBottom=Y
+kde X je hodnota v pixeloch pre odsadenie headera a Y je hodnota v pixeloch pre odsadenie footra.
+V CSS kode je mozne pouzit premene z ./postcss/resources/fw-custom-properties-config.css. Premenne --JSsafeAreaHeightTop a --JSsafeAreaHeightBottom
+nahradzuje dynamicky JavaScript pretoze hodnota moze byt rozna a dokonca meni sa aj za behu pri rotacii zariadenia.
+V CSS kode je mozne pouzit custom media z ./postcss/resources/fw-custom-media.css.
+*/
+
+/*mobile device*/
+@media (--extra-small) {
+
+    /*header height*/
+    .€fc_section__header { height: var(--fHeaderTitleHeightOnExtraSmall); }
+
+    /*padding top and bottom with top and bottom menu*/
+    .€fc_bodyApp > .€fc_menu_mobileTop + .€fc_menu_mobileBottom + .€fc_containerApp .€fc_section__header { height: var(--fHeaderTitleHeightOnExtraSmall); padding-top: 0; }
+
+    /*padding top with top menu*/
+    .€fc_bodyApp > .€fc_menu_mobileTop + .€fc_containerApp .€fc_section__header { height: var(--fHeaderTitleHeightOnExtraSmall); padding-top: 0; }
+
+    /*padding bottom with bottom menu*/
+    .€fc_bodyApp > .€fc_menu_mobileBottom + .€fc_containerApp .€fc_section__header { height: calc(var(--fHeaderTitleHeightOnExtraSmall) + var(--JSsafeAreaHeightTop)); padding-top: var(--JSsafeAreaHeightTop); }
+
+    /*padding wtihout top and bottom menu*/
+    .€fc_bodyApp > .€fc_containerApp .€fc_section__header { height: calc(var(--fHeaderTitleHeightOnExtraSmall) + var(--JSsafeAreaHeightTop)); padding-top: var(--JSsafeAreaHeightTop); }
+
+    /*padding with only bottom menu*/
+    .€fc_bodyApp > .€fc_menu_mobileTop + .€fc_menu_mobileBottom + .€fc_containerApp, .€fc_bodyApp > .€fc_menu_mobileBottom + .€fc_containerApp { padding-bottom: 0; }
+    .€fc_bodyApp > .€fc_containerApp { padding-bottom: var(--JSsafeAreaHeightBottom); }
+
+    /*height bottom and top menu*/
+    .€fc_menu_mobileTop { height: calc(var(--fHeaderHeightOnExtraSmall) + var(--JSsafeAreaHeightTop)); padding-top: var(--JSsafeAreaHeightTop); top: 0 }
+    .€fc_menu_mobileBottom { height: calc(var(--fFooterHeightOnExtraSmall) + var(--JSsafeAreaHeightBottom)); padding-bottom: var(--JSsafeAreaHeightBottom); bottom: 0; }
+
+    /*show only top menu*/
+    .€fc_bodyApp > .€fc_menu_mobileTop + .€fc_containerApp { top: calc(var(--fHeaderHeightOnExtraSmall) + var(--JSsafeAreaHeightTop)); height: calc(100% - var(--fHeaderHeightOnExtraSmall) - var(--JSsafeAreaHeightTop)); }
+
+    /*show only bottom menu*/
+    .€fc_menu_mobileBottom + .€fc_containerApp { height: calc(100% - var(--fFooterHeightOnExtraSmall)) + var(--JSsafeAreaHeightBottom); bottom: calc(var(--fFooterHeightOnExtraSmall) + var(--JSsafeAreaHeightBottom)) }
+
+    /*show top + bottom menu*/
+    .€fc_menu_mobileTop + .€fc_menu_mobileBottom + .€fc_containerApp { top: calc(var(--fHeaderHeightOnExtraSmall) + var(--JSsafeAreaHeightTop)); height: calc(100% - var(--fHeaderHeightOnExtraSmall) - var(--fFooterHeightOnExtraSmall) - var(--JSsafeAreaHeightTop) - var(--JSsafeAreaHeightBottom)); }
+}
+
+/*other devices*/
+@media (--small), (--medium), (--large) {
+
+    /*header*/
+    .€fc_section__header { height: calc(var(--fHeaderTitleHeight) + var(--JSsafeAreaHeightTop)); padding-top: var(--JSsafeAreaHeightTop); }
+
+    /*container app*/
+    .€fc_containerApp { padding-bottom: var(--JSsafeAreaHeightBottom); }
+}
+
+/*main menu*/
+.€fc_mainMenu { padding-top: var(--JSsafeAreaHeightTop); padding-bottom: var(--JSsafeAreaHeightBottom); }
+
+/*modal window*/
+.€fc_modalWindow__body { max-height: calc(var(--fModalWindowMaxHeight) - var(--JSsafeAreaHeightTop) - var(--JSsafeAreaHeightBottom)); }
+
+/*toast message*/
+.€fc_toastMessageCon { top: var(--JSsafeAreaHeightTop); }
+
+/*bubble notification*/
+.€fc_bubbleNotification { bottom: var(--JSsafeAreaHeightBottom); }

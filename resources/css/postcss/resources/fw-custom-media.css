@@ -1,0 +1,20 @@
+/*
+==========================================================================
+Custom media
+==========================================================================
+*/
+
+/*
+extra small  -   xs - Extra small screen
+small        -   sm - Small Tablet
+medium       -   md - Tablet, Smartphone screen
+large        -   lg - Desktop
+*/
+
+@custom-media --extra-small (max-width: 600px);
+
+@custom-media --small (min-width: 601px) and (max-width: 768px);
+
+@custom-media --medium (min-width: 769px) and (max-width: 1279px);
+
+@custom-media --large (min-width: 1280px);

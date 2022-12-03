@@ -1,0 +1,252 @@
+/*
+===========================================================
+Animations
+===========================================================
+*/
+
+/*
+* animate.css - http://daneden.me/animate
+* Version - 3.5.1
+* Licensed under the MIT license - http://opensource.org/licenses/MIT
+*
+* Copyright (c) 2016 Daniel Eden
+*/
+
+/*example:€fc_animated1s €fc_animated--infinite €bounce*/
+
+.€fc_animated--infinite { animation-iteration-count: infinite; }
+.€fc_animated1s { animation-duration: 1s; animation-fill-mode: both; }
+.€fc_animated2s { animation-duration: 2s; animation-fill-mode: both; }
+.€fc_animated3s { animation-duration: 3s; animation-fill-mode: both; }
+.€fc_animated08s { animation-duration: .8s; animation-fill-mode: both; }
+.€fc_animated05s { animation-duration: .5s; animation-fill-mode: both; }
+.€fc_animated03s { animation-duration: .3s; animation-fill-mode: both; }
+
+@keyframes bounce {
+    from, 20%, 53%, 80%, to { animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); transform: translate3d(0, 0, 0); }
+    40%, 43% { animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); transform: translate3d(0, -30px, 0); }
+    70% { animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060); transform: translate3d(0, -15px, 0); }
+    90% { transform: translate3d(0, -4px, 0); }
+}
+.€bounce { animation-name: bounce; transform-origin: center bottom; }
+@keyframes flash {
+    from, 50%, to { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+.€flash { animation-name: flash; }
+@keyframes pulse {
+    from { transform: scale3d(1, 1, 1); }
+    50% { transform: scale3d(1.05, 1.05, 1.05); }
+    to { transform: scale3d(1, 1, 1); }
+}
+.€pulse { animation-name: pulse; }
+@keyframes shake {
+    from, to { transform: translate3d(0, 0, 0); }
+    10%, 30%, 50%, 70%, 90% { transform: translate3d(-10px, 0, 0); }
+    20%, 40%, 60%, 80% { transform: translate3d(10px, 0, 0); }
+}
+.€shake { animation-name: shake; }
+@keyframes headShake {
+    0% { transform: translateX(0); }
+    6.5% { transform: translateX(-6px) rotateY(-9deg); }
+    18.5% { transform: translateX(5px) rotateY(7deg); }
+    31.5% { transform: translateX(-3px) rotateY(-5deg); }
+    43.5% { transform: translateX(2px) rotateY(3deg); }
+    50% { transform: translateX(0); }
+}
+.€headShake { animation-timing-function: ease-in-out; animation-name: headShake; }
+@keyframes bounceIn {
+    from, 20%, 40%, 60%, 80%, to { animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); }
+    0% { opacity: 0; transform: scale3d(.3, .3, .3); }
+    20% { transform: scale3d(1.1, 1.1, 1.1); }
+    40% { transform: scale3d(.9, .9, .9); }
+    60% { opacity: 1; transform: scale3d(1.03, 1.03, 1.03); }
+    80% { transform: scale3d(.97, .97, .97); }
+    to { opacity: 1; transform: scale3d(1, 1, 1); }
+}
+.€bounceIn { animation-name: bounceIn; }
+@keyframes bounceInDown {
+    from, 60%, 75%, 90%, to { animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); }
+    0% { opacity: 0; transform: translate3d(0, -3000px, 0); }
+    60% { opacity: 1; transform: translate3d(0, 25px, 0); }
+    75% { transform: translate3d(0, -10px, 0); }
+    90% { transform: translate3d(0, 5px, 0); }
+    to { transform: none; }
+}
+.€bounceInDown { animation-name: bounceInDown; }
+@keyframes bounceInLeft {
+    from, 60%, 75%, 90%, to { animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); }
+    0% { opacity: 0; transform: translate3d(-3000px, 0, 0); }
+    60% { opacity: 1; transform: translate3d(25px, 0, 0); }
+    75% { transform: translate3d(-10px, 0, 0); }
+    90% { transform: translate3d(5px, 0, 0); }
+    to { transform: none; }
+}
+.€bounceInLeft { animation-name: bounceInLeft; }
+@keyframes bounceInRight {
+    from, 60%, 75%, 90%, to { animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); }
+    from { opacity: 0; transform: translate3d(3000px, 0, 0); }
+    60% { opacity: 1; transform: translate3d(-25px, 0, 0); }
+    75% { transform: translate3d(10px, 0, 0); }
+    90% { transform: translate3d(-5px, 0, 0); }
+    to { transform: none; }
+}
+.€bounceInRight { animation-name: bounceInRight; }
+@keyframes bounceInUp {
+    from, 60%, 75%, 90%, to { animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); }
+    from { opacity: 0; transform: translate3d(0, 3000px, 0); }
+    60% { opacity: 1; transform: translate3d(0, -20px, 0); }
+    75% { transform: translate3d(0, 10px, 0); }
+    90% { transform: translate3d(0, -5px, 0); }
+    to { transform: translate3d(0, 0, 0); }
+}
+.€bounceInUp { animation-name: bounceInUp; }
+@keyframes bounceOut {
+    20% { transform: scale3d(.9, .9, .9); }
+    50%, 55% { opacity: 1; transform: scale3d(1.1, 1.1, 1.1); }
+    to { opacity: 0; transform: scale3d(.3, .3, .3); }
+}
+.€bounceOut { animation-name: bounceOut; }
+@keyframes bounceOutDown {
+    20% { transform: translate3d(0, 10px, 0); }
+    40%, 45% { opacity: 1; transform: translate3d(0, -20px, 0); }
+    to { opacity: 0; transform: translate3d(0, 2000px, 0); }
+}
+.€bounceOutDown { animation-name: bounceOutDown; }
+@keyframes bounceOutLeft {
+    20% { opacity: 1; transform: translate3d(20px, 0, 0); }
+    to { opacity: 0; transform: translate3d(-2000px, 0, 0); }
+}
+.€bounceOutLeft { animation-name: bounceOutLeft; }
+@keyframes bounceOutRight {
+    20% { opacity: 1; transform: translate3d(-20px, 0, 0); }
+    to { opacity: 0; transform: translate3d(2000px, 0, 0); }
+}
+.€bounceOutRight { animation-name: bounceOutRight; }
+@keyframes bounceOutUp {
+    20% { transform: translate3d(0, -10px, 0); }
+    40%, 45% { opacity: 1; transform: translate3d(0, 20px, 0); }
+    to { opacity: 0; transform: translate3d(0, -2000px, 0); }
+}
+.€bounceOutUp { animation-name: bounceOutUp; }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.€fadeIn { animation-name: fadeIn; }
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translate3d(0, -100%, 0); }
+    to { opacity: 1; transform: none; }
+}
+.€fadeInDown { animation-name: fadeInDown; }
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translate3d(-100%, 0, 0); }
+    to { opacity: 1; transform: none; }
+}
+.€fadeInLeft { animation-name: fadeInLeft; }
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translate3d(100%, 0, 0); }
+    to { opacity: 1; transform: none; }
+}
+.€fadeInRight { animation-name: fadeInRight; }
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translate3d(0, 100%, 0); }
+    to { opacity: 1; transform: none; }
+}
+.€fadeInUp { animation-name: fadeInUp; }
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+.€fadeOut { animation-name: fadeOut; }
+@keyframes fadeOutDown {
+    from { opacity: 1; }
+    to { opacity: 0; transform: translate3d(0, 100%, 0); }
+}
+.€fadeOutDown { animation-name: fadeOutDown; }
+@keyframes fadeOutLeft {
+    from { opacity: 1; }
+    to { opacity: 0; transform: translate3d(-100%, 0, 0); }
+}
+.€fadeOutLeft { animation-name: fadeOutLeft; }
+@keyframes fadeOutRight {
+    from { opacity: 1; }
+    to { opacity: 0; transform: translate3d(100%, 0, 0); }
+}
+.€fadeOutRight { animation-name: fadeOutRight; }
+@keyframes fadeOutUp {
+    from { opacity: 1; }
+    to { opacity: 0; transform: translate3d(0, -100%, 0); }
+}
+.€fadeOutUp { animation-name: fadeOutUp; }
+@keyframes zoomIn {
+    from { opacity: 0; }
+    50% { opacity: 0; transform: scale3d(.3, .3, .3); }
+    to { opacity: 1; }
+}
+.€zoomIn { animation-name: zoomIn; }
+@keyframes zoomOut {
+    from { opacity: 1; }
+    50% { opacity: 0; transform: scale3d(.3, .3, .3); }
+    to { opacity: 0; }
+}
+.€zoomOut { animation-name: zoomOut; }
+@keyframes slideInDown {
+    from { transform: translate3d(0, -100%, 0); visibility: visible; }
+    to { transform: translate3d(0, 0, 0); }
+}
+.€slideInDown { animation-name: slideInDown; }
+@keyframes slideInLeft {
+    from { transform: translate3d(-100%, 0, 0); visibility: visible; }
+    to { transform: translate3d(0, 0, 0); }
+}
+.€slideInLeft { animation-name: slideInLeft; }
+@keyframes slideInRight {
+    from { transform: translate3d(100%, 0, 0); visibility: visible; }
+    to { transform: translate3d(0, 0, 0); }
+}
+.€slideInRight { animation-name: slideInRight; }
+@keyframes slideInUp {
+    from { transform: translate3d(0, 100%, 0); visibility: visible; }
+    to { transform: translate3d(0, 0, 0); }
+}
+.€slideInUp { animation-name: slideInUp; }
+@keyframes slideOutDown {
+    from { transform: translate3d(0, 0, 0); }
+    to { visibility: hidden; transform: translate3d(0, 100%, 0); }
+}
+.€slideOutDown { animation-name: slideOutDown; }
+@keyframes slideOutLeft {
+    from { transform: translate3d(0, 0, 0); }
+    to { visibility: hidden; transform: translate3d(-100%, 0, 0); }
+}
+.€slideOutLeft { animation-name: slideOutLeft; }
+@keyframes slideOutRight {
+    from { transform: translate3d(0, 0, 0); }
+    to { visibility: hidden; transform: translate3d(100%, 0, 0); }
+}
+.€slideOutRight { animation-name: slideOutRight; }
+@keyframes slideOutUp {
+    from { transform: translate3d(0, 0, 0); }
+    to { visibility: hidden; transform: translate3d(0, -100%, 0); }
+}
+.€slideOutUp { animation-name: slideOutUp; }
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/*
+custom animation
+*/
+.€rotate { animation-name: rotate; }
+
+/*show hidden main menu*/
+@keyframes showMainMenu {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+}
+@keyframes hideMainMenu {
+    0% { transform: translate3d(-100%, 0, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+}

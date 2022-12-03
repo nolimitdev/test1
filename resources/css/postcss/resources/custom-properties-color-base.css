@@ -1,0 +1,36 @@
+/*
+==========================================================================
+Base color
+==========================================================================
+*/
+
+:root {
+
+--color270: #1BB749; /*success*/
+--color210: #FF222D; /*error*/
+--color220: #FF832B; /*warning*/
+--color230: #55ACEE; /*twitter*/
+--color240: #166FE5; /*facebook*/
+--color250: #EA4335; /*google*/
+--color260: #565aca; /*primary 600*/
+
+--palette10: #F44336;
+--palette20: #E91E63;
+--palette30: #9C27B0;
+--palette40: #673AB7;
+--palette50: #3F51B5;
+--palette60: #2196F3;
+--palette70: #03A9F4;
+--palette80: #00BCD4;
+--palette90: #009688;
+--palette100: #4CAF50;
+--palette110: #8BC34A;
+--palette120: #CDDC39;
+--palette130: #FFEB3B;
+--palette140: #FFC107;
+--palette150: #FF9800;
+--palette160: #FF5722;
+--palette170: #795548;
+--palette180: #9E9E9E;
+--palette190: #607D8B;
+}

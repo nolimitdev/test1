@@ -1,0 +1,315 @@
+/*
+===========================================================
+Viewport
+
+extra small  -   xs - Extra small screen
+small        -   sm - Small Tablet
+medium       -   md - Tablet, Smartphone screen
+large        -   lg - Desktop
+
+===========================================================
+*/
+
+/****************************************************
+Extra small screen
+             ____
+            |    |
+            |    |
+            |    |
+            |____|
+
+****************************************************/
+@media (--extra-small) {
+
+/*body*/
+.€fc_bodyApp { max-width: var(--fAppBodyWidthXs) }
+
+/*gird*/
+/*.€fc_noGutter-x_xs > [class^="€fc_col-"]:first-child, .€fc_noGutter-x_xs > [class*=" €fc_col-"]:first-child, .€fc_noGutter-x_xs > [class^="€fc_col-"]:last-child, .€fc_noGutter-x_xs > [class*=" €fc_col-"]:last-child, .€fc_noGutter-x_xs > [class^="€fc_col-"], .€fc_noGutter-x_xs > [class*=" €fc_col-"], .€fc_noGutter-x_xs > [class^="€fc_col-"]:only-child, .€fc_noGutter-x_xs > [class*=" €fc_col-"]:only-child { padding: 0; }*/
+
+.€fc_noGutter-x_xs > [class^="€fc_col-"] {padding:0; left:0; }
+
+/*helpers*/
+.€fh_hidden_xs { display: none !important; }
+.€fh_center_xs { margin: auto; }
+.€fh_ta-c_xs { text-align: center }
+.€fh_ta-r_xs { text-align: right }
+.€fh_r_xs { float: right }
+.€fh_l_xs { float: left }
+.€fh_w-100p_xs { width: 100%; }
+.€fh_h-100p_xs { height: 100%; }
+.€fh_w-33p_xs { width: 33.333%; }
+.€fc_row_gutter.€noGutter_xs > [class^="€fc_col-"], .€fc_row_gutter.€noGutter_xs > [class*=" €fc_col-"] { padding: 0; }
+.€fh_mp-0_xs { margin: 0 !important; padding: 0 !important }
+.€fh_m-0_xs { margin: 0 !important; }
+.€fh_p-0_xs { padding: 0 !important; }
+.€fh_mt-1_xs { margin-top: 1em }
+.€fh_ml-1_xs { margin-left: 1em }
+.€fh_m-1_xs { margin: 1em }
+.€fh_mb-1_xs { margin-bottom: 1em; }
+
+/*group input full width*/
+.€fc_groupInput--fullWidth_xs { width: 100%; display: table; table-layout: fixed; }
+.€fc_groupInput--fullWidth_xs > .€fc_groupInputItem { width: 100%; display: table-cell; max-width: 100%; }
+.€fc_groupInput--fullWidth_xs { width: 100%; }
+.€fc_groupInput--fullWidth_xs > .€fc_groupInputItem { width: 100%; }
+.€fc_groupInput--fullWidth_xs button { width: 100%; }
+
+/*main menu*/
+.€fc_mainMenuArea { top: 0 !important; width: var(--fMainMenuWidthOnExtraSmall); right: calc(var(--fMainMenuWidthOnExtraSmall)*-1); z-index: 200 }
+.€fc_mainMenuArea .€fc_menu__link { height: auto }
+/*show Main Menu*/
+.€fc_mainMenuArea--show { animation: showMainMenu 200ms ease-in forwards; }
+/*hidde Main Menu*/
+.€fc_mainMenuArea--hide { animation: hideMainMenu 200ms ease-out forwards; }
+
+/*main menu on righ*/
+.€fc_mainMenuOnRight .€fc_containerApp { left: 0; }
+.€fc_mainMenuOnRight .€fc_mainMenuArea { right: calc(var(--fMainMenuWidthOnExtraSmall)*-1); }
+
+/*container on mobile device*/
+.€fc_containerApp { width: 100%; right: 0; background: var(--fAppBgColorOnMobile); }
+
+/*bottom and top menu*/
+.€fc_menu_mobileTop { height: var(--fHeaderHeightOnExtraSmall); top: 0 }
+.€fc_menu_mobileBottom { height: var(--fFooterHeightOnExtraSmall); bottom: 0; }
+
+/*show only top menu*/
+.€fc_bodyApp > .€fc_menu_mobileTop + .€fc_containerApp { top: var(--fHeaderHeightOnExtraSmall); height: calc(100% - var(--fHeaderHeightOnExtraSmall)); }
+
+/*show only bottom menu*/
+.€fc_menu_mobileBottom + .€fc_containerApp { top: 0; height: calc(100% - var(--fFooterHeightOnExtraSmall)); }
+
+/*show top + bottom menu*/
+.€fc_menu_mobileTop + .€fc_menu_mobileBottom + .€fc_containerApp { top: var(--fHeaderHeightOnExtraSmall); height: calc(100% - var(--fHeaderHeightOnExtraSmall) - var(--fFooterHeightOnExtraSmall)); }
+
+/*air gutter*/
+.€fc_noAir_xs { padding: 0; margin: 0; border: 0; border-radius: 0; }
+.€fc_boxAirIn-2 { padding: 1rem; }
+
+/*modal window*/
+.€fc_modalWindow__body { min-width: 70vw; max-width: 90vw; }
+.€fc_modalWindow__topicName { text-align: center; }
+
+/*toast message*/
+.€fc_toastMessage__body { border-radius:0 }
+.€fc_toastMessageCon { padding: 0 0 2rem 0 }
+
+/*bubble notification*/
+.€fc_bubbleNotification { left:0; width: 100%; bottom:var(--fFooterHeightOnExtraSmall); margin: 0; border-radius:0 }
+
+/*toast notice*/
+.€fc_toastNotice { padding-left:calc(var(--fGlobalGap)*1.5); padding-right:calc(var(--fGlobalGap)*1.5); }
+
+/*header notification*/
+.€fc_notification__content { min-width: 320px; }
+.€fc_menu_mobile_Item > i, .€fc_menu_mobile_Item .€fc_dropdownMain > i  { font-size: 220%; }
+
+/*section title and content*/
+.€fc_section__header { height: calc(var(--fHeaderTitleHeightOnExtraSmall)); background: var(--fHeaderTitleBackgorundColorOnExtraSmall); border-bottom: 1px solid var(--fHeaderTitleBorderColorOnExtraSmall); }
+.€fc_section__headerAsButtonTitle, .€fc_section__headerAsTextTitle { text-align: center; margin: 0; }
+
+/*button in header*/
+.€fc_section__headerButton { position: relative; display: flex; height: 100%; }
+.€fc_section__headerButton .€fc_menu_mobile_Item { padding: 0 1rem }
+
+/*only text in header*/
+.€fc_section__headerAsTextTitle { font-size: calc(var(--fHeaderTitleFontSize)/1.2); }
+
+/*button in header*/
+.€fc_section__headerAsButtonButton { font-size: calc(var(--fHeaderTitleFontSize)/1.3); }
+
+/*navigation submenu in header*/
+.€fc_section__headerNavigation { display: none }
+
+/*center text in header if button dont exist*/
+.€fc_section__headerAsText >:last-of-type.€fc_section__headerAsTextTitle, .€fc_section__headerAsButton >:last-of-type.€fc_section__headerAsButtonTitleCon { padding: 0 4rem 0 0; }
+.€fc_section__headerAsText >:first-of-type.€fc_section__headerAsTextTitle, .€fc_section__headerAsButton >:first-of-type.€fc_section__headerAsButtonTitleCon { padding: 0 0 0 4rem; }
+.€fc_section__headerAsText >:nth-of-type(1).€fc_section__headerAsTextTitle, .€fc_section__headerAsButton >:nth-of-type(1).€fc_section__headerAsButtonTitleCon { padding: 0; }
+
+/*sigle line menu*/
+.€fc_menu__singleLine::-webkit-scrollbar { display: none; }
+
+/*vertical menu navigation with full width */
+.€fc_menuTabs--fullWidth_xs { width: 100%; }
+.€fc_menuTabs--fullWidth_xs li { display: table-cell !important; }
+.€fc_menuTabs--onlyIcon_xs a i { font-size: 170%; padding: 0; }
+
+/*dropdown*/
+.€fc_dropDown_xs { width: 90vw; left: 5vw !important }
+
+/*paging in table*/
+.€fc_pagingItem { flex: 1 1 auto; }
+.€fc_pagingItem:nth-child(2) { text-align: center; overflow: hidden; }
+.€fc_paging__range { @mixin --centered; }
+.€fc_pagingCounting, .€fc_pagingPagesTotal { flex: 1 1 auto; @mixin --noWrapDottSingleLine; }
+}
+
+/****************************************************
+Small Tablet
+ _______
+|        |
+|        |
+|  iPad  |
+|        |
+|________|
+
+****************************************************/
+@media (--small) {
+
+/*body*/
+.€fc_bodyApp { max-width: var(--fAppBodyWidthSm) }
+
+/*utilits*/
+.€fh_hidden_sm { display: none !important; }
+.€fh_center_sm { margin: auto; }
+.€fh_ta-r_sm { text-align: right }
+.€fh_ta-c_sm { text-align: center }
+.€fh_mt-1_sm { margin-top: 1rem }
+.€fc_noGutter-x_sm > [class^="€fc_col-"]:first-child, .€fc_noGutter-x_sm > [class*=" €fc_col-"]:first-child, .€fc_noGutter-x_sm > [class^="€fc_col-"]:last-child, .€fc_noGutter-x_sm > [class*=" €fc_col-"]:last-child, .€fc_noGutter-x_sm > [class^="€fc_col-"], .€fc_noGutter-x_sm > [class*=" €fc_col-"], .€fc_noGutter-x_sm > [class^="€fc_col-"]:only-child, .€fc_noGutter-x_sm > [class*=" €fc_col-"]:only-child { padding: 0; }
+
+/*main menu*/
+.€fc_mainMenuArea { width: var(--fMainMenuWidthOnSmall); }
+.€fc_mainMenuArea .€fc_menu__link { height: auto; }
+.€fc_containerApp { width: calc(100% - var(--fMainMenuWidthOnSmall)); left: var(--fMainMenuWidthOnSmall); background: var(--fAppBgColorOnTablet); }
+.€fc_mainMenu .€fc_menu__itemText { display: none }
+.€fc_mainMenu .€fc_menu__itemIcon { flex: 1 1 auto; margin: 0; }
+.€fc_mainMenu .€fc_menu__itemMoreInfo { font-size: 70%; width: 100%; text-align: center; }
+.€fc_mainMenu__userAvatar .€fc_userAvatarCon { justify-content: center; }
+.€fc_mainMenu__userAvatar .€fc_userAvatarDetail { display: none }
+
+/*notification*/
+.€fc_notification__content { min-width: 25em; }
+.€fc_menu_mobileCon { right: 1rem }
+.€fc_menu_mobileCon i { font-size: 180%; }
+
+/*section title and content*/
+.€fc_section__header { height: var(--fHeaderTitleHeight); }
+
+/*modal window*/
+.€fc_modalWindow__body { min-width: 50vw; max-width: 70vw; }
+
+/*toast message*/
+.€fc_toastMessage__body { max-width: 60vw; }
+
+/*group input full width*/
+.€fc_groupInput--fullWidth_sm { width: 100%; display: table; table-layout: fixed; }
+.€fc_groupInput--fullWidth_sm > .€fc_groupInputItem { width: 100%; display: table-cell; max-width: 100%; }
+.€fc_groupInput--fullWidth_sm { width: 100%; }
+.€fc_groupInput--fullWidth_sm > .€fc_groupInputItem { width: 100%; }
+.€fc_groupInput--fullWidth_sm button { width: 100%; }
+
+}
+
+/*****************************************************
+Tablet, Smartphone screen
+ ____________    _________
+|            |  |         |
+| Middle LCD |  |   iPad  |
+|____________|  |_________|
+
+****************************************************/
+@media  (--medium) {
+
+/*body*/
+.€fc_bodyApp { max-width: var(--fAppBodyWidthMd) }
+
+/*utilits*/
+.€fc_bodyApp { width: 100% }
+.€fh_hidden_md { display: none !important; }
+.€fh_center_md { margin: auto; }
+.€fh_ta-c_md { text-align: center }
+.€fh_ta-r_md { text-align: right }
+
+/*main menu control*/
+.€fc_mainMenuArea { width: var(--fMainMenuWidthOnMedium); }
+.€fc_mainMenuArea .€fc_menu__link { height: auto }
+.€fc_containerApp { width: calc(100% - var(--fMainMenuWidthOnMedium)); left: var(--fMainMenuWidthOnMedium); background: var(--fAppBgColorOnTablet); }
+
+/*toast message*/
+.€fc_toastMessage__body { max-width: 60vw; }
+
+/*modal window*/
+.€fc_modalWindow__body { min-width: 50vw; max-width: 70vw; }
+
+/*
+==========================================================================
+Other all styles
+==========================================================================
+*/
+
+/*main menu*/
+.€fc_mainMenu .€fc_menu__itemText { display: none }
+.€fc_mainMenu .€fc_menu__itemIcon { flex: 1 1 auto; margin: 0 }
+.€fc_mainMenu .€fc_menu__itemMoreInfo { font-size: 70%; width: 100%; text-align: center; }
+.€fc_mainMenu__userAvatar .€fc_userAvatarCon { justify-content: center; }
+.€fc_mainMenu__userAvatar .€fc_userAvatarDetail { display: none }
+
+/*header*/
+.€fc_notification__content { min-width: 25rem; }
+.€fc_menu_mobileCon { right: 2rem }
+.€fc_menu_mobileCon i { font-size: 160%; }
+
+/*section title and content*/
+.€fc_section__header { height: var(--fHeaderTitleHeight); }
+
+/*group input full width*/
+.€fc_groupInput--fullWidth_md { width: 100%; display: table; table-layout: fixed; }
+.€fc_groupInput--fullWidth_md > .€fc_groupInputItem { width: 100%; display: table-cell; max-width: 100%; }
+.€fc_groupInput--fullWidth_md { width: 100%; }
+.€fc_groupInput--fullWidth_md > .€fc_groupInputItem { width: 100%; }
+.€fc_groupInput--fullWidth_md button { width: 100%; }
+
+}
+
+/****************************************************
+LCD, Desktop
+ ______________       ____________
+|              |     |            |
+|   wide LCD   |     |   Laptop   |
+|______________|     |____________|
+
+****************************************************/
+@media (--large) {
+
+/*body*/
+.€fc_bodyApp { max-width: var(--fAppBodyWidthLg) }
+
+/*utilits*/
+.€fh_hidden_lg { display: none !important; }
+.€fh_center_lg { margin: auto; }
+.€fh_ta-c_lg { text-align: center }
+.€fh_ta-r_lg { text-align: right }
+
+/*group input full width*/
+.€fc_groupInput--fullWidth_lg { width: 100%; display: table; table-layout: fixed; }
+.€fc_groupInput--fullWidth_lg > .€fc_groupInputItem { width: 100%; display: table-cell; max-width: 100%; }
+.€fc_groupInput--fullWidth_lg { width: 100%; }
+.€fc_groupInput--fullWidth_lg > .€fc_groupInputItem { width: 100%; }
+.€fc_groupInput--fullWidth_lg button { width: 100%; }
+
+/*main menu*/
+.€fc_mainMenuArea { width: var(--fMainMenuWidthOnLarge); }
+.€fc_containerApp { width: calc(100% - var(--fMainMenuWidthOnLarge)); left: var(--fMainMenuWidthOnLarge); }
+
+/*
+==========================================================================
+Other all styles
+==========================================================================
+*/
+
+/*hedaer*/
+.€fc_notification__content { min-width: 25em; }
+.€fc_menu_mobileCon { right: 2rem }
+.€fc_menu_mobileCon i { font-size: 180%; }
+
+/*section title and content*/
+.€fc_section__header { height: var(--fHeaderTitleHeight); }
+
+/*toast message*/
+.€fc_toastMessage__body { max-width: 30vw; }
+
+/*modal window*/
+.€fc_modalWindow__body { min-width: 30vw; max-width: 50vw; }
+
+}

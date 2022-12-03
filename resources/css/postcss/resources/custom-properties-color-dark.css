@@ -1,0 +1,148 @@
+/*
+==========================================================================
+Dark color
+==========================================================================
+*/
+
+:root {
+
+/*Dark 1*/
+
+--white: #121212;
+--black: #FDFDFD;
+
+--color100: #161616;
+--color200: #262626;
+--color300: #393939;
+--color400: #525252;
+--color500: #6F6F6F;
+--color600: #8D8D8D;
+--color700: #A8A8A8;
+--color800: #C6C6C6;
+--color900: #E0E0E0;
+--color1000: #F4F4F4;
+
+--gray100: #161616;
+--gray200: #262626;
+--gray300: #393939;
+--gray400: #525252;
+--gray500: #6F6F6F;
+--gray600: #8D8D8D;
+--gray700: #A8A8A8;
+--gray800: #C6C6C6;
+--gray900: #E0E0E0;
+--gray1000: #F4F4F4;
+
+/*Dark 2*/
+
+/*
+--color100: #252626;
+--color200: #383a3a;
+--color300: #4c4f4f;
+--color400: #626565;
+--color500: #797c7c;
+--color600: #919595;
+--color700: #a9adad;
+--color800: #c2c5c5;
+--color900: #dee0e0;
+--color1000: #f9f9f9;
+
+--gray100: #252626;
+--gray200: #383a3a;
+--gray300: #4c4f4f;
+--gray400: #626565;
+--gray500: #797c7c;
+--gray600: #919595;
+--gray700: #a9adad;
+--gray800: #c2c5c5;
+--gray900: #dee0e0;
+--gray1000: #f9f9f9;*/
+
+
+/*Dark 3*/
+
+/*
+--white: #080A0E;
+--black: #FDFDFD;
+
+--color100: #181E26;
+--color200: #29313D;
+--color300: #364553;
+--color400: #485A6D;
+--color500: #65788E;
+--color600: #95A1B1;
+--color700: #AEB6C2;
+--color800: #CCD6DD;
+--color900: #E6EAEE;
+--color1000: #F3F5F7;
+
+--gray100: #181E26;
+--gray200: #29313D;
+--gray300: #364553;
+--gray400: #485A6D;
+--gray500: #65788E;
+--gray600: #95A1B1;
+--gray700: #AEB6C2;
+--gray800: #CCD6DD;
+--gray900: #E6EAEE;
+--gray1000: #F3F5F7;
+*/
+
+
+--fValueLevel: 4;
+
+--fColorSuccess:    color-mod(var(--color270) w(+10%));
+--fColorError:      color-mod(var(--color210) w(+10%));
+--fColorWarning:    color-mod(var(--color220) w(+10%));
+--fColorPrimary:    color-mod(var(--color260) w(+10%));
+--fColorGhost:      color-mod(var(--color700) w(+10%));
+--fSideBarBgColor:  color-mod(var(--color100) l(+10%));
+
+
+/*
+Dark 4
+*/
+
+/*
+--white:   #0e1219;
+--black:   #ffffff;
+
+--gray100: #0e1219;
+--gray200: #212833;
+--gray300: #333d4b;
+--gray400: #485467;
+--gray500: #5e6e85;
+--gray600: #7588a5;
+--gray700: #90a4c2;
+--gray800: #b3c0d4;
+--gray900: #d6dce8;
+--gray1000: #ffffff;
+
+--color100: #0e1219;
+--color200: #212833;
+--color300: #333d4b;
+--color400: #485467;
+--color500: #5e6e85;
+--color600: #7588a5;
+--color700: #90a4c2;
+--color800: #b3c0d4;
+--color900: #d6dce8;
+--color1000: #ffffff;
+
+--fColorSuccess:    color-mod(var(--color270) w(+10%));
+--fColorError:      color-mod(var(--color210) w(+20%));
+--fColorWarning:    color-mod(var(--color220) w(+10%));
+--fColorPrimary:    color-mod(var(--color260) w(+10%));
+--fColorGhost:      color-mod(var(--color700) w(+10%));
+--fSideBarBgColor:  color-mod(var(--color100) l(+10%));
+
+--fValueLevel:   4;
+*/
+
+/*https://leonardocolor.io/?colorKeys=%230d1117&base=0d1117&ratios=1.01%2C1.28%2C1.72%2C2.47%2C3.62%2C5.24%2C7.42%2C10.25%2C13.81%2C20&mode=HSLuv*/
+
+/*https://leonardocolor.io/theme.html?name=FW+UI&config=%7B%22baseScale%22%3A%22color%22%2C%22colorScales%22%3A%5B%7B%22name%22%3A%22gray%22%2C%22colorKeys%22%3A%5B%22%23000000%22%5D%2C%22colorspace%22%3A%22HSV%22%2C%22ratios%22%3A%5B%221.05%22%2C%221.33%22%2C%221.73%22%2C%222.27%22%2C%223.03%22%2C%224.17%22%2C%225.83%22%2C%228.19%22%2C%2211.37%22%2C%2215.13%22%5D%2C%22smooth%22%3Atrue%7D%2C%7B%22name%22%3A%22color%22%2C%22colorKeys%22%3A%5B%22%234a4ec3%22%5D%2C%22colorspace%22%3A%22HSL%22%2C%22ratios%22%3A%5B%221.05%22%2C%221.33%22%2C%221.73%22%2C%222.27%22%2C%223.03%22%2C%224.17%22%2C%225.83%22%2C%228.19%22%2C%2211.37%22%2C%2215.13%22%5D%2C%22smooth%22%3Afalse%7D%5D%2C%22lightness%22%3A100%2C%22contrast%22%3A1%2C%22saturation%22%3A100%7D*/
+
+/*#ffffff,#f9f9f9,#dfdfdf,#c5c5c5,#acacac,#949494,#7c7c7c,#656565,#4f4f4f,#3a3a3a,#262626,#f9f9fd,#dddef4,#c0c2ea,#a4a7e1,#8a8ed8,#6f73cf,#5458c6,#3c40b2,#2c2f83,#1d1f57
+*/
+}

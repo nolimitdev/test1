@@ -1,0 +1,307 @@
+/*
+===========================================================
+Elements
+===========================================================
+*/
+
+@charset "utf-8";
+:root {
+    /*Firefox scrollbar*/
+    scrollbar-color: var(--fScrollbarThumb) color-mod(var(--gray300) a(10%));
+}
+
+body {
+    color: var(--fTextColor);
+    @mixin --fTextNormal;
+    line-height: var(--fTextLineHeightBody);
+    font-size: var(--fFontSizeMd);
+    /*font-display: fallback;*/
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+    /*fix Chrome bug 300ms tap  http://updates.html5rocks.com/2013/12/300ms-tap-delay-gone-away*/
+    touch-action: manipulation;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    transform: translateZ(0); /*disable bouncing effect in safari and mobile browser FF,CH*/
+    width: 100%;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    background: var(--fAppBodyBgColor);
+}
+
+/*box sizing */
+*, *::after, *::before {
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent; /* turn off" link highlight */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) transparent;
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    /*font rendering*/
+    font-smooth: always;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+    /*contain: layouts;*/
+    outline: 0; /*disable defalut style in button, textarea, select, input etc.*/
+    appearance: none;
+    overflow-scrolling: touch; /* disable callout, image save panel (popup) */
+    -webkit-overflow-scrolling: touch;  /* -webkit-overflow-scrolling: touch; - removed problem in embeded window for safari*/
+    -webkit-touch-callout: none;
+    touch-callout: none;
+}
+a { color: var(--fTextColor); text-decoration: none; }
+a:hover { text-decoration: none; }
+b { @mixin --fTextBold; }
+br { clear: both; overflow: hidden; }
+
+/*reset all styles*/
+/** {all: initial; }*/
+
+/*
+==========================================================================
+Scroll
+==========================================================================
+*/
+
+/*IE*/
+
+/*body { -ms-overflow-style: -ms-autohiding-scrollbar; }*/
+
+/*
+disable scroll bar in IE, EDGE
+* { -ms-overflow-style: none; }
+*/
+::-webkit-scrollbar { width: var(--fScrollbarWidth); height: var(--fScrollbarHeight); }
+::-webkit-scrollbar-button { width: 0; height: 0; }
+::-webkit-scrollbar-thumb { background:  color-mod(var(--fScrollbarThumb) a(50%)); border: 0; border-radius: 5px;   }
+::-webkit-scrollbar-thumb:hover { background: color-mod(var(--fScrollbarThumbHover) a(70%))}
+::-webkit-scrollbar-thumb:active { background: color-mod(var(--fScrollbarThumbActive) a(90%))}
+::-webkit-scrollbar-track { background: transparent; border: 0; border-radius: var(--fScrollbarTrackRadius);  }
+::-webkit-scrollbar-track:hover { background: transparent; }
+::-webkit-scrollbar-track:active { background: transparent; }
+::-webkit-scrollbar-corner { background: transparent; }
+
+/*Mozilla width scrollbar*/
+ * { scrollbar-width: thin; }
+
+/*
+==========================================================================
+Global fonts
+==========================================================================
+*/
+
+/*https://type-scale.com/*/
+h1 { font-size: var(--fFontSizeXxxl); }
+h2 { font-size: var(--fFontSizeXxl); }
+h3 { font-size: var(--fFontSizeXl); }
+h4 { font-size: var(--fFontSizeLg); }
+p { font-size: var(--fFontSizeMd); }
+h5 { font-size: var(--fFontSizeSm); }
+small { font-size: var(--fFontSizeXs); }
+
+h1, h2, h3, h4, p { line-height: var(--fTextLineHeightBody); }
+
+/*
+==========================================================================
+Global inputs
+==========================================================================
+*/
+
+select, textarea, button { zoom: 1; }
+button { font-size: var(--fFontSizeMd); @mixin --fTextNormal; }
+[class^="€icon-"], [class*=" €icon-"] { font-size: var(--fIconSizeMd); vertical-align: middle; }
+
+/*
+==========================================================================
+Text select
+==========================================================================
+*/
+::-moz-selection { background: var(--fTextSelect); color: color-mod(var(--fTextSelect) contrast(100%) l(+100%)) }
+::selection { background: var(--fTextSelect); color: color-mod(var(--fTextSelect) contrast(100%) l(+100%)) }
+code::-moz-selection { background: var(--fTextSelectCode); color: color-mod(var(--fTextSelect) contrast(100%) l(+100%)) }
+code::selection { background: var(--fTextSelectCode); color: color-mod(var(--fTextSelect) contrast(100%) l(+100%)) }
+::focus { outline: none; }
+::-moz-focus-inner { border: transparent; }
+
+/*
+==========================================================================
+SelectBox
+==========================================================================
+*/
+select::-ms-expand { display: none; }
+
+/*remove arrow from select option in IE*/
+select { height: 100%; width: 100%; border: 0 solid transparent; background: transparent; font-size: var(--fFontSizeMd); display: inline-block; vertical-align: middle; }
+select:hover { cursor: pointer; }
+/*
+==========================================================================
+Inputs text, password
+==========================================================================
+*/
+
+/* Disable arrow + - "arrow" -  on input type number */
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { appearance: none; }
+
+/* Firefox */
+input[type=number] { appearance: textfield; }
+
+/*disabled inputs*/
+input[disabled=disabled], input:disabled, select[disabled=disabled] *, select:disabled * { color: var(--fInputDisabledColor) !important; background: transparent; }
+
+/*placeholder*/
+input::placeholder { color: color-mod(var(--fInputFocusColor) a(50%)); }
+input:focus::placeholder { color: var(--fInputFocusColor); opacity: 0; }
+
+/*
+==========================================================================
+Textarea
+==========================================================================
+*/
+
+textarea { resize: none; border: 0; display: block; width: 100%; background: var(--fTextAreaBackgroundColor); font-size: var(--fTextAreaFontSize); color: var(--fTextColor); }
+textarea::placeholder { color: color-mod(var(--fInputFontColor) a(50%)); }
+textarea:focus::placeholder { color: var(--fInputFontColor); opacity: 0; }
+
+/*
+==========================================================================
+Radiobutton, Checkbox
+==========================================================================
+*/
+
+/*checkbox , radiobutton*/
+input[type=radio], input[type=checkbox] { vertical-align: middle }
+option { width: 100%; vertical-align: middle; }
+
+/*
+==========================================================================
+Table
+==========================================================================
+*/
+
+table { width: 100%; border-collapse: separate; background: var(--fTableBackground); }
+table td, table th, table caption { background: var(--fTableBackground); }
+th { vertical-align: middle; position: relative; }
+th:hover { background: var(--fTableHeadActive); @mixin --transition2s }
+tr:hover td { background: var(--fTableRowHover) !important; @mixin --transition2s }
+th:hover:empty { cursor: default; background: transparent; }
+
+/*hidden border*/
+th:hover:empty:after, th:hover:empty:before { display: none }
+th:hover:not(:empty) { position: relative; }
+
+/*hidden border on hover*/
+th:first-child:hover:after, th:last-child:hover:before { display: none }
+th a { display: block; white-space: nowrap; text-overflow: ellipsis; vertical-align: middle; color: var(--fTableHeadColor); @mixin --noWrapDottSingleLine; }
+td, th { position: relative; vertical-align: middle; }
+table input, table select { max-width: 100%; }
+tr { position: relative; }
+
+/*
+==========================================================================
+Button
+==========================================================================
+*/
+button { border: 0; margin: 0; float: none; position: relative; cursor: pointer; vertical-align: middle; padding: 0 var(--fFontSizeMd); height: var(--fInputHeightMd); line-height: var(--fInputHeightMd); }
+
+/*! modern-normalize | MIT License | https://github.com/sindresorhus/modern-normalize */
+
+/**
+ * Use a more readable tab size (opinionated).
+ */:root { -moz-tab-size: 4; tab-size: 4; }
+
+/**
+ * Add the correct text decoration in Chrome, Edge, and Safari.
+ */
+abbr[title] { text-decoration: underline dotted; }
+
+
+/**
+ * 1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code, kbd, samp, pre { font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace; /* 1 */ font-size: 1em; /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
+
+/**
+ * Remove the inheritance of text transform in Edge and Firefox.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button, [type='button'], [type='reset'], [type='submit'] { -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner, [type='button']::-moz-focus-inner, [type='reset']::-moz-focus-inner, [type='submit']::-moz-focus-inner { border-style: none; padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring, [type='button']:-moz-focusring, [type='reset']:-moz-focusring, [type='submit']:-moz-focusring { outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset { padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend { padding: 0; }
+
+/**
+ * Add the correct vertical alignment in Chrome and Firefox.
+ */
+progress { vertical-align: baseline; }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type='number']::-webkit-inner-spin-button, [type='number']::-webkit-outer-spin-button { height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type='search'] { -webkit-appearance: textfield; /* 1 */ outline-offset: -2px; /* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type='search']::-webkit-search-decoration { -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button { -webkit-appearance: button; /* 1 */ font: inherit; /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Chrome and Safari.
+ */
+
+summary { display: list-item; }
